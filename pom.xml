@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- 当前pom模型的版本 -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- springboot父项 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.12</version>
+        <relativePath/>
+    </parent>
+
+    <!-- 项目信息 -->
+    <groupId>org.heroic</groupId>
+    <artifactId>aibot-api</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- 打包方式 -->
+    <packaging>pom</packaging>
+
+    <!-- 子模块 -->
+    <modules>
+        <module>aibot-api-domain</module>
+        <module>aibot-api-application</module>
+        <module>aibot-api-interfaces</module>
+        <module>aibot-api-infrastructure</module>
+    </modules>
+
+    <!-- 统一声明所有依赖的版本 -->
+    <dependencyManagement>
+        <dependencies>
+            <!-- fastjson -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.58</version>
+            </dependency>
+            <!-- 对字符串进行各种操作的工具类库 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.8</version>
+            </dependency>
+            <!-- 单元测试 -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>
+                <scope>test</scope>
+            </dependency>
+            <!-- 自动管理浏览器Driver包 -->
+            <dependency>
+                <groupId>io.github.bonigarcia</groupId>
+                <artifactId>webdrivermanager</artifactId>
+                <version>5.0.3</version>
+            </dependency>
+            <!-- Web自动化测试工具 -->
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-java</artifactId>
+                <version>3.141.59</version>
+            </dependency>
+            <!-- 应用程序编程接口，一组函数和方法，可以用不同的编程语言来控制和操作Web浏览器 -->
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-api</artifactId>
+                <version>3.141.59</version>
+            </dependency>
+            <!-- HttpClient依赖 -->
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>4.5.14</version>
+            </dependency>
+            <!-- 专门处理与MIME类型有关问题 -->
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpmime</artifactId>
+                <version>4.5.10</version>
+            </dependency>
+            <!-- TestNG自动化测试工具 -->
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>RELEASE</version>
+                <scope>test</scope>
+            </dependency>
+            <!-- json数据解析与生成的Java类库 -->
+            <dependency>
+                <groupId>net.sf.json-lib</groupId>
+                <artifactId>json-lib</artifactId>
+                <version>2.2.3</version>
+                <classifier>jdk15</classifier><!-- jdk版本 -->
+            </dependency>
+            <!-- hutool工具 -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>5.8.10</version>
+            </dependency>
+            <!-- lombok注解 -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.30</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
