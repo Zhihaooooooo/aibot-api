@@ -1,0 +1,8 @@
+server:
+  port: 8090
+
+aibot-api:
+  groupId: 你的groupId
+  cookie: 你的cookie
+  APIKey: 文心一言APIKey
+  SecretKey: 文心一言SecretKey
